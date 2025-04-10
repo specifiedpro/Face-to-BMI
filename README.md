@@ -1,4 +1,4 @@
-# BMI Prediction with ResNet50 and Auxiliary Features
+# BMI Prediction with ResNet50 
 
 This repository implements a PyTorch-based pipeline for predicting Body Mass Index (BMI) from images. By leveraging a pretrained ResNet50 model and enhancing it with an auxiliary sex feature in a custom regression layer, this project achieves a Pearson correlation of **0.665**—exceeding the baseline of 0.65.
 
