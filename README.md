@@ -1,21 +1,54 @@
-# Face-to-BMI
-BMI Prediction with ResNet50 and Auxiliary Features
-This repository provides a PyTorch-based pipeline for predicting Body Mass Index (BMI) from images. It leverages a pretrained ResNet50 model, enhanced by an auxiliary sex feature in its regression head to refine predictions. Through extensive data augmentation and hyperparameter grid search, this project achieves a Pearson correlation of 0.665, surpassing the baseline of 0.65 established in prior work.
+# BMI Prediction with ResNet50 and Auxiliary Features
 
-Key Features
-Pretrained ResNet50 Backbone: Uses transfer learning to extract rich visual features from images.
+This repository implements a PyTorch-based pipeline for predicting Body Mass Index (BMI) from images. By leveraging a pretrained ResNet50 model and enhancing it with an auxiliary sex feature in a custom regression layer, this project achieves a Pearson correlation of **0.665**—exceeding the baseline of 0.65.
 
-Custom Regression Layer: Incorporates an additional sex feature for improved prediction accuracy.
+## Key Features
+- **Pretrained ResNet50 Backbone**  
+  Utilizes transfer learning to extract high-level visual features for effective BMI estimation.
+- **Custom Regression Layer**  
+  Integrates an additional sex feature to boost prediction accuracy.
+- **Comprehensive Data Augmentation & Hyperparameter Tuning**  
+  Applies various random transformations (e.g., resizing, cropping, color jittering) alongside a systematic grid search to optimize model performance.
+- **Modular and Production-Ready Codebase**  
+  Separates data preprocessing, model definition, training routines, and configuration for maintainability and scalability.
 
-Data Augmentation & Hyperparameter Tuning: Implements random transformations and a systematic search to optimize model performance.
+## Repository Structure
+BMI_Final_Proj/ ├── data/ # CSV and image data (not tracked by Git) ├── notebooks/ # Exploratory notebooks │ └── exploratory.ipynb ├── src/ │ ├── config.yaml # Configuration file for paths and hyperparameters │ ├── data_prep.py # Data loading, cleaning, and splitting functions │ ├── dataset.py # Custom PyTorch Dataset definition │ ├── model.py # Modified ResNet50 model with auxiliary feature integration │ ├── train.py # Training, evaluation, and hyperparameter tuning routines │ └── main.py # Main entry point for running the training pipeline ├── requirements.txt # Python dependencies ├── .gitignore # Files and directories to ignore in Git └── README.md # Project documentation (this file)
 
-Modular Codebase: Separates data preprocessing, model definition, and training scripts for clean, production-ready workflows.
+bash
+Copy
 
-Getting Started
-Clone this repository and install dependencies via pip install -r requirements.txt.
+## Quick Start
+1. **Clone the Repository & Install Dependencies:**
+   ```bash
+   git clone https://github.com/yourusername/BMI_Final_Proj.git
+   cd BMI_Final_Proj
+   pip install -r requirements.txt
+Configure the Project:
 
-Organize your data in the specified structure and update the paths in config.yaml.
+Update the src/config.yaml file to reflect your data paths and preferred hyperparameters.
 
-Train the model by running python src/main.py to reproduce the reported results.
+Run the Training Pipeline:
 
-Use the contributions section of the README to see how you can adapt the code for different datasets or to add more features for BMI prediction. For more details, refer to the inline documentation and comments throughout the source files.
+bash
+Copy
+python src/main.py
+Results
+Achieved a Pearson correlation of 0.665 on the test set, surpassing the published baseline of 0.65.
+
+Detailed metrics such as Mean Squared Error (MSE) and Mean Absolute Error (MAE) are logged during training and validation.
+
+Contributing
+Contributions are welcome! Please consider opening an issue or submitting a pull request with improvements or additional features, such as:
+
+Enhanced data preprocessing or augmentation techniques.
+
+Alternative model architectures.
+
+Extended evaluation metrics and visualizations.
+
+License
+This project is licensed under the MIT License.
+
+Acknowledgements
+This project builds upon insights from existing BMI prediction literature and leverages the power of PyTorch for model development and training.
