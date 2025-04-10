@@ -17,7 +17,7 @@ This repository implements a PyTorch-based pipeline for predicting Body Mass Ind
 1. **Clone the Repository & Install Dependencies:**
    ```bash
    git clone https://github.com/specifiedpro/Face-to-BMI.git
-   cd BMI_Final_Proj
+   cd Face-to-BMI
    pip install -r requirements.txt
 Configure the Project:
 
