@@ -12,11 +12,6 @@ This repository implements a PyTorch-based pipeline for predicting Body Mass Ind
 - **Modular and Production-Ready Codebase**  
   Separates data preprocessing, model definition, training routines, and configuration for maintainability and scalability.
 
-## Repository Structure
-BMI_Final_Proj/ ├── data/ # CSV and image data (not tracked by Git) ├── notebooks/ # Exploratory notebooks │ └── exploratory.ipynb ├── src/ │ ├── config.yaml # Configuration file for paths and hyperparameters │ ├── data_prep.py # Data loading, cleaning, and splitting functions │ ├── dataset.py # Custom PyTorch Dataset definition │ ├── model.py # Modified ResNet50 model with auxiliary feature integration │ ├── train.py # Training, evaluation, and hyperparameter tuning routines │ └── main.py # Main entry point for running the training pipeline ├── requirements.txt # Python dependencies ├── .gitignore # Files and directories to ignore in Git └── README.md # Project documentation (this file)
-
-bash
-Copy
 
 ## Quick Start
 1. **Clone the Repository & Install Dependencies:**
